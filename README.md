@@ -31,7 +31,7 @@ Certifique-se de ter instalado:
 
 1. **Clone o Repositório**
    ```bash
-   git clone https://github.com/seu-usuario/desafio-aawz.git
+   git clone https://github.com/GustavoBeretta/Desafio-AAWZ.git
    cd desafio-aawz
 
 2. **Instale as Dependências**
