@@ -42,16 +42,17 @@ Certifique-se de ter instalado:
     ```bash
    npm run dev
 
-   A aplicação estará disponível em http://localhost:3000.
+A aplicação estará disponível em http://localhost:3000.
 
 ## Estrutura do Projeto
 
-src/
-├── components/
-│   ├── UserForm.vue  # Formulário de cadastro de usuário
-│   ├── UserList.vue  # Lista de usuários cadastrados
-│   ├── StateDistributionChart.vue # Gráfico de distribuição de usuários por estado
-│   ├── StateDistributionChart.vue # Gráfico de distribuição de usuários por origem
-├── stores/
-│   └── userStore.js  # Gerenciamento de estado com Pinia
-└── App.vue           # Componente principal da aplicação
+   ```bash
+   src/
+   ├── components/
+   │   ├── UserForm.vue  # Formulário de cadastro de usuário
+   │   ├── UserList.vue  # Lista de usuários cadastrados
+   │   ├── StateDistributionChart.vue # Gráfico de distribuição de usuários por estado
+   │   ├── StateDistributionChart.vue # Gráfico de distribuição de usuários por origem
+   ├── stores/
+   │   └── userStore.js  # Gerenciamento de estado com Pinia
+   └── App.vue           # Componente principal da aplicação
