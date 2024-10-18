@@ -127,19 +127,19 @@ export default {
             this.user.bairro = response.data.bairro || 'Bairro não encontrado';
             this.user.cidade = response.data.localidade || 'Cidade não encontrada';
             this.user.estado = response.data.uf || 'Estado não encontrado';
-            this.isValid = true; // Habilitar o botão de envio
+            this.isValid = true;
           } else {
-            this.resetAddressFields(); // Limpa os campos se o CEP for inválido
-            this.isValid = false; // Desabilitar o botão de envio
+            this.resetAddressFields();
+            this.isValid = false;
           }
         } catch (error) {
           console.error('Erro ao buscar endereço:', error);
-          this.resetAddressFields(); // Limpa os campos em caso de erro
-          this.isValid = false; // Desabilitar o botão de envio
+          this.resetAddressFields();
+          this.isValid = false;
         }
       } else {
-        this.resetAddressFields(); // Limpa os campos se o CEP não for válido
-        this.isValid = false; // Desabilitar o botão de envio
+        this.resetAddressFields();
+        this.isValid = false;
       }
     },
     resetAddressFields() {
@@ -149,14 +149,12 @@ export default {
       this.user.estado = '';
     },
     isValidCep(value) {
-      return value && value.length === 8 && /^[0-9]+$/.test(value); // Validação simples para garantir que o CEP tenha 8 dígitos numéricos
+      return value && value.length === 8 && /^[0-9]+$/.test(value);
     },
     handleSubmit() {
-      // Certifique-se de que os campos de endereço estão preenchidos antes de adicionar o usuário
       if (this.isValid && this.user.logradouro) {
         this.userStore.addUser({ ...this.user });
         console.log('Usuário Cadastrado:', this.user);
-        // Resetar formulário
         this.$refs.form.reset();
         this.user = { name: '', email: '', cep: '', number: '', logradouro: '', bairro: '', cidade: '', estado: '', origin: '' };
       } else {
