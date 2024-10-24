@@ -1,4 +1,4 @@
-# Desafio AAWZ
+# Sistema de Cadastro de Usuários
 
 Este projeto é uma aplicação Vue 3 que permite o cadastro de usuários com informações como nome, email, endereço e origem. Ele exibe uma lista de usuários e utiliza gráficos para apresentar a distribuição por estado e por origem.
 
